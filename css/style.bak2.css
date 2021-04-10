@@ -1,0 +1,110 @@
+
+.fancytylerk:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1000;
+  background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 5px);
+  background-size: 50% 5px;
+  -webkit-animation: lines 2s ease-out infinite;
+          animation: lines 2s ease-out infinite;
+  opacity: 0.3;
+  mix-blend-mode: color-burn;
+  pointer-events: none;
+  height:80px;
+}
+.fancytylerk .text, .fancytylerk .text > * {
+  position: absolute;
+  top: 6.5%;
+  left:50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.fancytylerk .text > * {
+  font-size: 50px;
+  -webkit-animation: giggle 2.5s ease infinite;
+          animation: giggle 2.5s ease infinite;
+  mix-blend-mode: difference;
+}
+.fancytylerk .text .r {
+  color: #f00;
+  left: -0.5px;
+}
+.fancytylerk .text .g {
+  color: #0f0;
+  -webkit-animation-delay: -1.6s;
+          animation-delay: -1.6s;
+}
+.fancytylerk .text .b {
+  color: #00f;
+  -webkit-animation-delay: -1.33s;
+          animation-delay: -1.33s;
+  left: 0.5px;
+}
+
+
+
+.fancytylerk .text .r a:link{
+  color: #0c0;
+}
+
+.fancytylerk .text .g a:link{
+  color: #000;
+}
+
+.fancytylerk .text .b a:link{
+  color: #0c0;
+}
+
+.fancytylerk .text .r a:hover, a:active{
+  color: #f00;
+}
+
+.fancytylerk .text .g a:hover, a:active{
+  color: #0f0;
+}
+
+.fancytylerk .text .b a:hover, a:active{
+  color: #000;
+}
+
+@-webkit-keyframes giggle {
+  0%, 100% {
+    -webkit-transform: translate(-50%, -50%) translateY(-2px);
+            transform: translate(-50%, -50%) translateY(-2px);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) translateY(2px);
+            transform: translate(-50%, -50%) translateY(2px);
+  }
+}
+
+@keyframes giggle {
+  0%, 100% {
+    -webkit-transform: translate(-50%, -50%) translateY(-2px);
+            transform: translate(-50%, -50%) translateY(-2px);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) translateY(2px);
+            transform: translate(-50%, -50%) translateY(2px);
+  }
+}
+@-webkit-keyframes lines {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 0px 25px;
+  }
+}
+@keyframes lines {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 0px 25px;
+  }
+}

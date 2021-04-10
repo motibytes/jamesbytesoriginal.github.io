@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+
+		<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=B612+Mono" rel="stylesheet">
+
+		<!--
+		font-family: 'B612 Mono', monospace;
+		font-family: 'Share Tech Mono', monospace; -->
+		<title>
+			xcp1v.net
+		</title>
+		<style>
+			body {
+				background-image: url("b2.jpg");
+				font-family: 'Share Tech Mono', monospace;
+			}
+			header {
+				background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 5px);
+				color: #AAF200;
+				text-align:center;
+				padding:3px;
+			}
+			header a:link {
+				color: #AAF200;
+				text-decoration: none;
+			}
+			header a:link, a:visited {
+				color: #AAF200;
+				text-decoration: none;
+			}
+			header a:hover, a:active {
+				color: #AAF200;
+			}
+			#sidebar a:link, a:visited {
+				color:white;
+				padding: 5px 10px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+			}
+			#sidebar a:hover, a:active {
+				color: #AAF200;
+			}
+			#sidebar a:visited {
+				color:#AAF200;
+			}
+			#sidebar {
+				line-height:30px;
+				background-color:black;
+				color: white;
+				width:100px;
+				height:905px;
+				float:left;
+				padding:5px;
+			}
+			aside a:link, a:visited {
+				color:white;
+				padding: 5px 10px;
+				text-decoration: none;
+				display: inline-block;
+			}
+			aside a:hover, a:active {
+				color: white;
+			}
+			aside a:visited {
+				color:#AAF200;
+			}
+			aside a:link {
+					color:#AAF200;
+			}
+			aside {
+				text-align: right;
+				color: white;
+				float:right;
+				width:100px;
+				height:800px;
+				background-color:black;
+				padding:5px;
+			}
+			.topnavclass a:visited {
+				color: black;
+				padding: 5px 10px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+			}
+			.topnavclass a:link, a:visited {
+				color: black;
+				padding: 5px 10px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+			}
+			.topnavclass  a:hover, a:active {
+				background-color: black;
+				color: #AAF200;
+			}
+			nav.topnavclass {
+				background-color:#C8F55E;
+				text-align:center;
+				padding:5px;
+				size:18px;
+				}
+			#nextnav {
+				height:5px;
+			}
+			section {
+				width:800px;
+				float:left;
+				padding:0px;
+				color:#ABC864;
+			}
+			footer {
+				background-color:black;
+				color:white;
+				clear:both;
+				text-align:center;
+				padding:5px;
+				float:bottom;
+			}
+			#main {
+			}
+			.rainbow {
+			   /* Font options */
+			  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+			   /* Chrome, Safari, Opera */
+			  -webkit-animation: rainbow 3s infinite;
+			  /* Internet Explorer */
+			  -ms-animation: rainbow 3s infinite;
+			  /* Standar Syntax */
+			  animation: rainbow 3s infinite;
+			}
+			/* Chrome, Safari, Opera */
+			@-webkit-keyframes rainbow{
+			  0%{color: orange;}
+			  10%{color: purple;}
+				20%{color: red;}
+			  30%{color: CadetBlue;}
+				40%{color: yellow;}
+			  50%{color: coral;}
+				60%{color: green;}
+			  70%{color: cyan;}
+			  80%{color: DeepPink;}
+			  90%{color: DodgerBlue;}
+				100%{color: orange;}
+			}
+			/* Internet Explorer */
+			@-ms-keyframes rainbow{
+			  0%{color: orange;}
+			  10%{color: purple;}
+				20%{color: red;}
+				40%{color: yellow;}
+				60%{color: green;}
+				100%{color: orange;}
+			}
+			/* Standar Syntax */
+			@keyframes rainbow{
+			  0%{color: orange;}
+			  10%{color: purple;}
+				20%{color: red;}
+				40%{color: yellow;}
+				60%{color: green;}
+				100%{color: orange;}
+			}
+			.text-legendary {
+				background-image: -webkit-linear-gradient(left,#D68AB0 0%,#D8CE5D 25%,#6BD85D 50%,#5DB9D8 75%,#D85DCB 100%);
+				background-size: 1000% 1000%;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				-webkit-animation: Text-Legendary 6s infinite;
+				color: #AAF200;
+				}
+				.text-legendary a:link {
+				background-image: -webkit-linear-gradient(left,#D68AB0 0%,#D8CE5D 25%,#6BD85D 50%,#5DB9D8 75%,#D85DCB 100%);
+				background-size: 1000% 1000%;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				-webkit-animation: Text-Legendary 6s infinite;
+				color: #AAF200;
+				}
+		</style>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/terminal.css">
+		<script src="lib/codemirror.js"> </script>
+		<script src="mode/css/css.js"> </script>
+		<script src="mode/javascript/javascript.js"> </script>
+		<script src="mode/python/python.js"> </script>
+
+		<link rel="stylesheet" href="lib/codemirror.css">
+		<link rel="stylesheet" href="theme/the-matrix.css">
+		<link rel="stylesheet" href="theme/twilight.css">
+		<link rel="stylesheet" href="theme/vibrant-ink.css">
+
+
+
+
+	</head>
+<body>
+   <!-- <canvas id="myCanvas"></canvas> -->
+	<header>
+		<div class="fancytylerk">
+		  <div class="text">
+		   <div class="r"><a href='home.html'>jamesbyt.es</a></div>
+		   <div class="g"><a href='home.html'>jamesbyt.es</a></div>
+		   <div class="b"><a href='home.html'>jamesbyt.es</a></div>
+		 </div>
+	 </div>
+		<h1 style="  visibility: hidden;">jamesbyt.es</h1>
+	<!--	<h1><a href="home.html" >   x c p 1 v 0 3 z 3 r 3 y k l</a> </h1> -->
+	</header>
+	<!-- links at the top -->
+
+		<nav  class="topnavclass"> <nav class="topnavclass"> <a href="home.sites.html"> external links </a>
+	</nav><nav class="topnavclass">			<!-- <a href="home.projects.html">projects</a> -->
+		</nav>
+		</nav>
+
+
+	<!-- links on left -->
+	<nav id="sidebar">
+ 	<a href="home.html">home</a> <br>
+
+		<a href="home.projects.html">projects</a>  <br>
+		<a href="home.workspace.html">workspace</a>  <br>
+		<a href="home.info.html">chat</a>  <br>
+		<br>
+		<a href=".\contact\contact.html">contact</a>  <br>
+
+	</nav>
+
+
+	<section id="main">
+	  <div class="screen">
+		  <p>Welcome to my homepage. <br><br> This site is a collection of my projects and things I am currently working on.  </p>
+			<p> I am a coder, web designer, writer, linux lover, free thinker. I am excited about the future of technology and AI.
+			<p> My focus is creation.</p>
+
+		</div><!-- replaced privacy advocate free thinker -->
+		<section style="width:800px;">
+		<div>
+				<p class="rainbow" style="text-align:center; "> °°°·.°·..·°¯°·._.· What's New! ·._.·°¯°·.·° .·°°° </p>
+		</div>
+				<div class="text-legendary" style="text-align:center;">
+				<A HREF="projects.1.1.0.videogamelife.html" >Document - Law of Videogaming Life </A>  <br> <!-- upload a demo as well -->
+				<A HREF=".\destiny\index.html" ><br> Character Gallery - Destiny 2: Evolution of a Hunter  </A> <br> <br>  <!-- upload a demo as well -->
+				</div>
+				<div style="height:50px;"
+		</div>
+		</section>
+		<!--- trinket text -->
+		<section class="topnavclass" style="width:1200px;">
+		<div style="width:360px; float:left;">
+			 	<h3>	&nbsp; &nbsp;<a href="https://kuz3.trinket.io/sites/kevia-s_tavern_prototype">Kevia's Tavern Prologue</a> </h3>
+		</div>
+		<div style="width:360px; float:left; text-align:left;">
+				<h3>&nbsp; &nbsp;<a href="https://kuz3.trinket.io/sites/glass_pathway"> A Glass Pathway </a></h3>
+		</div>
+
+<!--		<div style="height:5px;">  </div> -->
+	</section>
+
+	<!--- trinkets text -->
+		<div style="width:1450px;"><!-- was 1450 -->
+			<iframe src="https://trinket.io/embed/python/aa2509caaa?runOption=run&start=result" width="350" height="350" frameborder="0" marginwidth="0" marginheight="0"; style="float:left; position:relative; padding-right:10px;"></iframe>
+			<iframe src="https://trinket.io/embed/python/9fe408d209?runOption=run&start=result" width="350" height="350" frameborder="0" marginwidth="0" marginheight="0"; style="float:left; position:relative; padding-right:10px;";></iframe>
+				<form style="position: relative; float:left; "><textarea id="code" name="code">
+KEVIA's TAVERN PROGRESS
+randomly pull response else statement kev_main
+drink menu kev_main
+1.31-2.1.2019
+1. Updating code trinkets site
+
+1.30.19
+1. standardizing expressions to ==
+2. Finished all remaining functions and while loops up to kev_main()
+3. Finished all time.sleep() inputs up to kev_main()
+4. Reformatted all up to kev_main()
+learned exec()
+#  sad to learn it's not possible to go, x = 'while %s %s %s:' % a, b, c
+# learned I could shorten lines of code by using exec().
+#learned limitations of exec
+#  wrote broken code:
+#    x = 0
+#    var1 = 'x'
+#    operator1 = '!='
+#    var2 = '10'
+#    operator2 = None
+#    var3 = None
+#    exec "while %s %s %s %s %s:" % (var1, operator1, var2, operator2, var3)
+#    print 'hi'
+#    x + 1
+#    print x
+
+1.29.19
+  1. I think i can use x += to return more than one response -DONE
+#    if x = 1:
+#      print b
+#    else:
+#      x += 1
+#      print a
+  2. Then I can have it return the next item in a list. <<-----------
+#    test this first with my errorz() function.
+  3. THEN I can store input into a dictionary.
+#        how will that work?
+#        A = "userresponse"
+#        "userresponse : A1 "
+#        laterresponse = A1?
+  4. Can automatically append laterresponse to A1 in the dict with a module i call?
+  5. I can create a class that calls while loops
+#        write example here
+
+  Used local next = None before while loop.
+  #Learned I couldn't use global next because while loop would meet true and never run
+  #Learned I can't use module for while due to not running in current function.
+    #^Question, is there a way to have a module run outside of itself?
+
+1.28.19
+1. wrote while loop that uses and
+#learned or while loop always returned one choice true
+#Learned time.sleep(3) will break if user inputs during sleep function
+2. stored next = raw_input in function
+3. rewrote beginning to use a teleporter to navigate
+4. imported time.sleep to flow out conversation text nicely
+				</textarea>
+				</form>
+
+
+				<script>
+					var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+						lineNumbers: true,
+						mode: {name: "python",
+									 version: 2.7,
+									 singleLineStringErrors: false},
+						theme: "the-matrix",
+						matchBrackets: true,
+					});
+
+					editor.setSize(550, 350);
+				</script>
+			</div>
+<section style="width:1200px;">
+<div style="width:360px; float:left;">
+		<h3>	&nbsp; &nbsp;Kevia's Tavern </h3>
+</div>
+<div style="width:360px; float:left; text-align:left;">
+		<h3>&nbsp; &nbsp; Kevia's Tavern Code </h3>
+</div>
+
+<div style="height:5px;">  </div>
+</section>
+<div style="width:1450px;"><!-- was 1450 -->
+
+	<iframe src="https://trinket.io/embed/python/ada1e5f42a?runOption=run&start=result" width="350" height="350" frameborder="0" marginwidth="0" marginheight="0"; style="float:left; position:relative; padding-right:10px;"></iframe>
+<iframe src="https://trinket.io/embed/python/ada1e5f42a?toggleCode=true" width="350" height="350" frameborder="0" marginwidth="0" marginheight="0"; style="float:left; position:relative; padding-right:10px;";></iframe>
+<form style="position: relative; float:left; "><textarea id="code5" name="code5">
+notes
+
+	Set up Pi  X
+	Create AI Box X
+	.net to host my code X
+	AI Box script to output python code X
+	Exercise 1 through 34 X
+	Exercise 35 - “Make this game” - Created Glass_Pathway.py X
+	Exercise 38 “ lists” X
+	Exercise 39 'dictionaries” X
+	Exercise 40 - “OOP classes” X
+	Exercise 36 - “Make your own Game” X
+	Kevias Tavern - while loops X
+	Kevias Tavern - change output by increment in errorz() X
+	Kevias Tavern - time.sleep() X
+	Kevias Tavern - Python trinket full webpage. X
+	Learn Github and host games in repo X
+	Laws of game doc X
+	Add mirc discord to site X
+	Kevias Tavern - password teleporter X
+
+
+	Positivity helper code
+	Exercise 36 - “Add Lists, Functions Modules”  to Kevia’s Tavern
+	Kevias Tavern - emotion prompt
+	Kevias Tavern - drink menu
+	Kevias Tavern - questions menu
+	Kevias Tavern - add random if output with lists
+	Kevias Tavern - add dict that stores else output
+	Kevias Tavern - add dict that stores input and returns later
+	Renpy Kevias Tavern with face
+	AIBox Kevia’s Tavern
+	AIBox Kev.AI
+	Kevin Prototype
+	Kevin Renpy
+	Kevin AIBox
+	Finish All 52 Chapters of LPTHW
+
+</textarea>
+</form>
+
+
+<script>
+	var editor = CodeMirror.fromTextArea(document.getElementById("code5"), {
+		lineNumbers: true,
+		mode: {name: "python",
+					 version: 2.7,
+					 singleLineStringErrors: false},
+		theme: "the-matrix",
+		matchBrackets: true,
+	});
+
+	editor.setSize(550, 350);
+</script>
+</div>
+</section>
+
+<section style="width:1200px;">
+
+<form style="position: relative; float:left; padding-top:10px;"><textarea id="code2" name="code2">
+#outdated
+	from sys import exit
+
+	name = "Human" #later kevia will ask name.
+
+	def teleporttokev():
+	    print "Space and time shift before your eyes. \n"
+	    kev_main()
+
+	def errorz():
+	    #errora = True
+	    #if errora == True:
+	    print "Unknown Voice: \t \"What? That's not a choice... \n Perhaps just try using the number of the choice you want to make?\""
+	    #or even a secret keyword!
+	    #print "(Sometimes this message shows up as a glitch..)"
+	    return
+
+	def start():
+	    global name
+	    print
+	    print "You're walking down a dimly lit sidewalk at night."
+	    print "The sidewalk is dimly lit by yellow streetlamps."
+	    print "\n Have you been here before %s? " % name
+	    print "\n\t Yes or No? "
+	    while True:
+	        next = raw_input("> ").lower()
+	        if "1" in next or "yes" in next:
+	            teleporttokev()
+	        elif "2" in next or "no" in next:
+	            entrance()
+	        elif "back" in next:
+	            print "What? You can't go back from here!"
+	        elif "exit" in next:
+	            print "Terminate program? \n Y or N"
+	            next = raw_input("> ").lower()
+	            if "y" in next:
+	                print "Farewell, Traveler.."
+	                exit(0)
+	            if "n" in next:
+	                print "You're still where you left off. I think. \n Maybe you meant \"back?\" "
+	        else:
+	            errorz()
+
+	def entrance():
+	    global name
+	    print "You see a building with a neon sign labeled \"Kevia\'s Tavern\"."
+	    print "\n\t What do you want to do %s?" % name
+	    print "\n 1. Enter the tavern \n 2. Continue walking into the night"
+
+	    next = raw_input("> ").lower()
+	    if "1" in next or "enter" in next or "tavern" in next:
+	        kev_tavern()
+	    elif "2" in next or "continue" in next or "walk" in next or "into" in next or "night" in next:
+	        endless_sidewalk()
+	    elif "back" in next:
+	        start()
+	    else:
+	        errorz()
+
+	def endless_sidewalk():
+	    print
+	    print "You're still walking down the sidewalk."
+	    print "Your feet are getting tired and it's getting cold.."
+	    print "\n\t What should you do?"
+	    print "\n 1. Keep walking \n 2. Go home"
+	    #while True:
+	    next = raw_input("> ").lower()
+	    if "1" in next or "keep" in next or "walk" in next:
+	        entrance()
+	    elif "2" in next or "Go" in next or "home" in next:
+	        home()
+	    elif "back" in next:
+	        endless_sidewalk()
+	    else:
+	        errorz()
+	#    if "1" in
+
+	def home():
+	    print """You went back home and got warm in bed. \n
+	    Nothing really happened after that.
+	    """
+	    exit(0)
+	def kev_tavern():
+	    print "You stand at the entrance of the tavern. \nAn android stands behind the bar. He sees you and waves."
+	    print "\nKEVIA: \t \"Don't be a stranger. Here we welcome the weary ..and curious..\""
+	    print "KEVIA: \t \"If you fancy a drink, they're out of this world..\""
+	    print "\n 1. Look around the room first"
+	    print " 2. Walk over to the bar"
+	    print " 3. Start screaming and run home"
+	    next = raw_input("> ").lower()
+	#    if tavern == "1":
+	#        print "uh oh. this part hasn't been written yet."
+	#this breaks without while loop
+	    #
+	    if "1" in next:
+	        print "uh oh. this part hasn't been written yet."
+	    elif "2" in next:
+	        bar()
+	    elif "3" in next:
+	        home()
+	    elif next == "back":
+	        return
+	    else:
+	        errorz()
+
+	def bar():
+	    global name
+	    print "You walk up to the bar."
+	    print "KEVIA: \t \"Take any seat you like %s.\"" % name
+	    print "\n 1. Sit \n 2. Stand \n 3. Levitate"
+	    next = raw_input("> ").lower()
+	    if "1" in next or "sit" in next:
+	        print "KEVIA: \"Ah yes, it's nice to rest your legs once in a while.\""
+	        kev_about()
+	    elif "2" in next or "stand" in next:
+	        print "KEVIA: \"Ah, it's quite nice to talk to someone at eye level.\""
+	        kev_about()
+	    elif "3" in next or "levitate" in next:
+	        print "KEVIA shakes in terror for a moment before regaining his composure."
+	        print "\n KEVIA: \"Are you sure you aren't one of our regulars? At any rate, that looks dreadfully difficult.\""
+	        kev_about()
+	    elif "back" in next:
+	        return
+	    else:
+	        errorz()
+
+	def kev_about():
+	    print "KEVIA: \"Now then, allow me to introduce myself...\""
+	    print "\n 1. Listen \n 2. Try to Ignore \n 3. Stab KEVIA "
+	    next = raw_input("> ").lower()
+	    if "1" in next or "listen" in next or "2" in next or "ignore" in next:
+	        kev_about2()
+	    if "3" in next or "stab" in next:
+	        print "You fly over the table and stab KEVIA through the heart. He doesn't seem to mind."
+	        print " "
+	        kev_about2()
+
+	def kev_about2():
+	    print """KEVIA: \"I am Kevia, a prototype of Kev.AI. I tend this fine establishment. \n
+	    You can now ask me for drinks (to go on adventures). I am also capable of small talk.\" """
+	    print "\n 1. Continue"
+	    next = raw_input("> ").lower()
+	    if next == "1":
+	        kev_main()
+
+
+
+
+
+
+	def kev_main():
+	    print "Kevia hums and shines a glass cup with an old rag.."
+	    next = raw_input("> ").lower()
+	    if next == "1":
+	        kev_main()
+	    else:
+	        print "I see."
+
+	#option quick help
+	#option see drink menu
+	#option see questions menu
+	#recap intro
+	# or just say something.
+	#add recap as an option that goes over some deets.
+	start()
+</textarea>
+</form>
+
+
+<script>
+	var editor = CodeMirror.fromTextArea(document.getElementById("code2"), {
+		lineNumbers: true,
+		mode: {name: "python",
+					 version: 2.7,
+					 singleLineStringErrors: false},
+		theme: "twilight",
+		matchBrackets: true,
+	});
+
+	editor.setSize(1270, 100);
+</script>
+</section>
+<section style="width:1250px;">
+
+<form style="position: relative; float:left; padding-top:10px;"><textarea id="code3" name="code3">
+#outdated
+	#from sys import exit
+	weapon = "nothing" #testing string
+	flashlight = False #testing booleon
+	demon_key = False
+	boss_key = False
+	test = "nothing"
+	demon_light = False
+	take_sword = False
+	demon_moved = False
+	intro = True
+	def vault():
+	    print "You are in the inside of a vault. The vault is an endless library full of books, \n with a large open book in the center of the room."
+
+	    print "\nYou read the large book and learn that as each new story is written,\nfrom a child's bedtime story to an fictional love letter to the transcript for a new movie, \n a new reality is created and that story is brought into existence."
+	    print "\nAbove the room, there is no roof. You see an infinite sky with thousands of floating glass windows flying by, each window a door into another story."
+	    print "You look down and notice a pen rests on top of the large book."
+	    print "\nWhat will you dream into existence?"
+	    print "\t-The End."
+
+	def chamber_room():
+	    global flashlight
+	    global weapon
+	    global demon_key
+	    global demon_light
+	    global demon_moved
+	    global take_sword
+	     #practicing local var
+	    #demon_light = False..
+	    choice_sword = "\n1. Take sword "
+	    choice_attack = "\n2. Attack "
+	    choice_shine_light = "\n3. Shine light on Demon "
+	    choice_go = "\n4. Run"
+
+	    if not demon_moved and not demon_light:
+	        demon_stare = "A demon stares at you with rabid eyes."
+	    if not demon_moved and demon_light: #elif not working here
+	        demon_stare = "The demon is cowering in fear."
+	    else:
+	        demon_stare = " "
+	    if weapon == "nothing" and not demon_moved:
+	        sword_lying = "Behind the demon, a sword is lying on the ground."
+	    elif weapon == "nothing" and demon_moved:
+	        sword_lying = "A sword is lying on the ground."
+	    elif weapon == "sword": #unnecessary code.
+	        sword_lying = " "
+	    print "You're in a golden chamber. %s " % demon_stare, sword_lying
+	#below changes available choices
+	    if take_sword:
+	        choice_sword = " "
+	    if demon_light:
+	        choice_shine_light = " "
+	    if demon_moved:
+	        choice_attack = " "
+	        choice_go = "\n4. Leave "
+
+	    print "%s" %  choice_sword, choice_attack, choice_shine_light, choice_go
+
+	    next = raw_input("> ")
+	    if next == "1" and not take_sword and not demon_light:
+	        print "You try to take the sword and the demon devours your soul."
+	        dead("your corpse is thrown into an endless abyss.")
+
+	    if next == "1" and not take_sword and demon_light:
+	        print "You pick up the sword."
+	        take_sword = True
+	        weapon = "sword"
+	        chamber_room()
+	    elif next == "2" and weapon == "nothing" and not demon_moved:
+	        print "You have no weapon. The demon devours your soul."
+	        dead("your corpse is thrown into an endless abyss.")
+	    elif next == "2" and weapon == "sword" and not demon_light and not demon_moved:
+	        print "The demon lunges towards you and passes right through your sword, devouring your soul."
+	        dead("your corpse is thrown into an endless abyss.")
+
+	    elif next == "2" and weapon == "sword" and demon_light and not demon_moved:
+	        print "You raise your sword to the demon, and stab it through the chest. It disintegrates."
+	        print "A key rises from the ground and enters your soul."
+	        demon_moved = True
+	        demon_key = True
+	        chamber_room()
+	    elif next == "3" and not flashlight and not demon_light and not demon_moved:
+	        print "You have no light. The demon devours your soul."
+	        dead("your corpse is thrown into an endless abyss.")
+	    elif next == "3" and flashlight and not demon_light and not demon_moved:
+	        print "You shine your flashlight on the demon. It cowers in fear."
+	        demon_light = True
+	        chamber_room()
+	    elif next == "4":
+	        glass_pathway()
+	#    while True: # We will probably get rid of this.
+
+	def boss_room():
+	    global flashlight
+	    global weapon
+	    global boss_key
+	    if not flashlight:
+	        print "You see a flashlight lying on the floor."
+
+	    print "A figure in black approaches."
+	    print "With his eyes closed, the shadow draws a sword.."
+	    print "You have %s to fight with." % weapon
+
+	    if not flashlight:  #Rewrite this to be like chamber_room
+	        print "\n1. Take flashlight. \n2. Run \n3. Attack \n4. Shine light on figure."
+	    else:
+	        print "\n2. Run \n3. Attack \n4. Shine light on figure."
+
+	    next = raw_input("> ")
+	    if next == "1":
+	        print "You took the flashlight."
+	        flashlight = True
+	        #print flashlight #remove later
+	        boss_room()
+	    elif next == "2":
+	        glass_pathway()
+	    elif next == "3" and weapon == "nothing":
+	        dead("Your lungs fill with blood as you reach your hand to your heart before collapsing in a river of blood.")
+	    elif next == "3" and weapon == "sword":
+	        boss_key = True
+	        print "With a solid swing, the shadow falls. A pool of blood forms and flows to your feet."
+	        print "A key floats up from the ground and enters your soul."
+	        print "1. Continue?" #Rewrite this.. and have a local var change Run to Leave.
+	        next = raw_input("> ")
+	        next = int(next) # practicing, this allows me to not put 1 in quotes..
+	        if next == 1:
+	            glass_pathway() #change to next room
+	    elif next == "4" and not flashlight:
+	        dead("You have no light. You are sliced apart in the darkness.")
+	    elif next == "4" and flashlight:
+	        dead("The figure illuminates, cold eyes stare into your soul as you are sliced in half.")
+	    else:
+	        boss_room()
+
+	def dead(why):
+	    print why, "try again."
+	#    exit(0)
+
+	def glass_pathway():
+	  global flashlight
+	  global weapon
+	  global demon_key
+	  global boss_key
+	#debug
+	 # print "flashlight: %s" % flashlight
+	  #print "weapon: %s" % weapon
+	  #print "boss_key %s" % boss_key
+	  #print "demon_key %s" % demon_key
+	  print "You are standing on a floating glass path in endless space. \nStars are all you can see in this infinity."
+	  print "\nThis path in front of you splits into three, each path leading to a large door."
+	  print "The middle door has two large keyholes."
+	  print "\nWhich one do you take?"
+	  print "1. Left \n2. Middle \n3. Right"
+	  global intro
+	  if intro:
+	    print "(type a number and press enter)"
+	  next = raw_input("> ")
+	  if next == "1":
+	      intro = False
+	      chamber_room()
+	  elif next == "2" and boss_key == True and demon_key == True:
+	      print "Keys leave from your soul and fly into the keyholes. The door opens."
+	      intro = False
+	      vault()
+	  elif next == "2":
+	      dead("You walk up to the door and touch it. \nYour soul implodes and you disintegrate, your consciousness spiraling into madness.")
+	  elif next == "3":
+	      intro = False
+	      boss_room()
+	  else:
+	    dead("Oops.. You fall off the edge into eternity.")
+	glass_pathway()
+
+</textarea>
+</form>
+
+
+<script>
+	var editor = CodeMirror.fromTextArea(document.getElementById("code3"), {
+		lineNumbers: true,
+		mode: {name: "python",
+					 version: 2.7,
+					 singleLineStringErrors: false},
+		theme: "vibrant-ink",
+		matchBrackets: true,
+	});
+
+	editor.setSize(1270, 100);
+</script>
+</section>
+
+		</div>
+		<br>
+		<section style="width:1250px;">
+
+		</div>
+		<!-- unused rainbow <a class="text-legendary" href="home.info.html">watch face </a>  <br> -->
+<!-- MIRC was on this site but it's so unstable		<div style="width:820px;">
+		<iframe src="https://kiwiirc.com/client/irc.freenode.net/?nick=minion|?&theme=cli#tylerk" style="border:0; width:800px; height:350px;"></iframe>
+	</div> -->
+
+		<div>
+			<br> <br>
+			last update: 1.27.19
+		</section>
+		<!--right sidebar, remove to remove right sidebar as needed -->
+<!--
+		<aside>
+			<a href=".\contact\contact.html">contact</a>  <br>
+		</aside>
+-->
+			<!-- bottom banner -->
+	<footer>
+Created by James T. Bytes. <!-- 04/24/1994. All Rights Reserved.
+some css modified from https://codepen.io/z-/pen/XNQaym
+pip boy css screen modified from https://codepen.io/chris22smith/pen/YZPrjr
+blend mode crt modified from https://codepen.io/z-/pen/XNQaym)
+associated licenses stored on .net root
+Thank God for this life, for my blessings, for this world. -->
+	</footer>
+</body>
+</html>
